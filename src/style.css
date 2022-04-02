@@ -6,18 +6,18 @@ html{
 .body{
     background-color: #F7F7F7;
     padding: 38px 35px;
+    justify-content: center;
     display: grid;
-    grid: "secao-video-principal secao-video-principal secao-propaganda"
-          "secao-video-principal secao-video-principal secao-lista-videos" 
-          "secao-titulo             secao-titulo       secao-lista-videos" / auto auto 35%;
+    grid: "secao-video-principal secao-propaganda"
+          "secao-video-principal secao-lista-videos" 
+          "secao-titulo          secao-lista-videos";
 }
 
 .secao-video-principal{
+    height: 21.7rem;
+    width: 54.3rem;
     padding-right: 1.7rem;
     grid-area: secao-video-principal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .secao-video-principal iframe{
@@ -26,13 +26,14 @@ html{
 }
 
 .secao-titulo{
-    padding: 1.2rem 1.7rem 0 0;
+    width: 54.3rem;
+    padding:0  1.7rem 0 0;
     grid-area: secao-titulo;
 }
 
 .secao-titulo h1{
     font-size: 1.8rem;
-    padding: 1.7rem 0 0.7rem;
+    padding: 0 1.7rem 0.7rem 0;
 }
 
 .secao-titulo p{
@@ -42,20 +43,22 @@ html{
 
 .secao-propaganda{
     grid-area: secao-propaganda;
+    height: 5.6rem;
+    width: 27.0rem;
 }
 
 .secao-propaganda a, .secao-propaganda img{
-    height: 100%;
     width: 100%;
+    height: 100%;
 }
 
 .secao-lista-videos{
-    padding-top: 2rem;
     grid-area: secao-lista-videos;
+    padding: 16px 0;
 }
 
 .secao-lista-videos ul li a{
-    padding: 16px 0;
+    padding-bottom: 16px;
     display: flex;
 }
 
@@ -64,12 +67,17 @@ html{
     width: 10.1rem;
 }
 
+.secao-lista-videos ul li a img{
+    height: 100%;
+}
 .secao-lista-videos h2{
+    padding-left: 4px;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .secao-lista-videos p{
+    padding-left: 4px;
     font-weight: 300;
     font-size: 1.3rem;
 }
